@@ -1,0 +1,30 @@
+table {
+    border-collapse: collapse;
+    width: 100%;
+    text-align: left;
+
+    thead {
+        tr {
+            background-color: transparent !important;
+        }
+    }
+
+    tr {
+        &:nth-child(odd) {
+            background-color: var(--color-gray-lighter);
+        }
+
+        td {
+            &:first-child {
+                border-radius: var(--radius-sm) 0 0 var(--radius-sm);
+            }
+            &:last-child {
+                border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+            }
+        }
+    }
+
+    th, td {
+        padding: 10px;
+    };
+}

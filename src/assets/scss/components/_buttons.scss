@@ -1,0 +1,47 @@
+button, .button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: var(--color-button-primary);
+    cursor: pointer;
+    color: var(--color-white);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 40px;
+    width: fit-content;
+    transition: .2s;
+
+    &--close {
+        background-color: transparent;
+        color: var(--color-black);
+        padding: var(--space-xxs);
+        margin-right: calc(var(--space-xxs) * -1);
+
+        svg {
+            fill: var(--color-black) !important;
+        }
+
+        &:hover {
+            background-color: transparent !important;
+        }
+    }
+
+    &--danger {
+        background-color: var(--color-button-danger);
+
+        &:hover {
+            background-color: var(--color-button-danger-hover) !important;
+        }
+    }
+
+    svg {
+        fill: var(--color-white);
+    }
+
+    &:hover {
+        background-color: var(--color-button-primary-hover);
+    }
+}

@@ -1,0 +1,109 @@
+body {
+    margin: 0;
+    background-color: var(--color-gray-lighter);
+    color: var(--color-gray-dark);
+    font-family: 'Roboto', sans-serif;
+}
+
+.box-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 40px 20px 20px;
+    box-shadow: var(--shadow-sm);
+    background-color: var(--color-white);
+    border-radius: var(--radius-xs);
+    margin-bottom: 24px;
+}
+
+.avatar-box {
+    display: block;
+    text-align: center;
+}
+
+.user-avatar {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+
+    &--big {
+        width: 100px;
+        height: 100px;
+        border-radius: 100px;
+        margin: 0 auto 24px;
+        border: 3px solid var(--color-gray-lighter);
+        box-shadow: 0 0 0 2px var(--color-gray);
+        background-color: var(--color-gray-light);;
+    }
+}
+
+.paginator {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    border-radius: 4px;
+    margin: 16px 0;
+    user-select: none;
+
+    li {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+        font-weight: 600;
+        width: 36px;
+        height: 36px;
+        border: 1px solid var(--color-gray-light);
+        border-right: none;
+        padding: 10px;
+        color: var(--color-success);
+        background-color: var(--color-white);
+        cursor: pointer;
+        transition: .2s;
+
+        &:first-child {
+            border-radius: var(--radius-xs) 0 0 var(--radius-xs);
+        }
+
+        &:last-child {
+            border-radius: 0 var(--radius-xs) var(--radius-xs) 0;
+            border-right: 1px solid var(--color-gray-light);
+        }
+
+        &.current {
+            pointer-events: none;
+        }
+
+        &.current,
+        &:hover {
+            background-color: var(--color-success);
+            color: var(--color-white);
+        }
+    }
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.icon-small {
+    height: 16px;
+    width: 100%;
+    max-width: 16px;
+    fill: var(--color-gray);
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.icon-list {
+    margin-right: 16px;
+
+    &:last-child {
+        margin-right: 0;
+    }
+}

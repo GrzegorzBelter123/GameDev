@@ -1,0 +1,52 @@
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1400px;
+  width: 100%;
+  padding-right: var(--gutter-x, .75rem);
+  padding-left: var(--gutter-x, .75rem);
+  margin-right: auto;
+  margin-left: auto;
+
+  @media screen and (min-width: $screen-md-min) {
+    padding-top: 40px;
+    padding-bottom: 20px;
+  }
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(var(--gutter-y)* -1);
+  margin-right: calc(var(--gutter-x)* -.5);
+  margin-left: calc(var(--gutter-x)* -.5);
+}
+
+.row>* {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 100%;
+  padding-right: calc(var(--gutter-x)* .5);
+  padding-left: calc(var(--gutter-x)* .5);
+  margin-top: var(--gutter-y);
+}
+
+.col {
+  flex: 1 0 0;
+}
+
+@media screen and (min-width: $screen-md-min) {
+  .col-md-4 {
+    flex: 0 0 auto;
+    width: 33.33333333%;
+  }
+
+  .col-md-8 {
+    flex: 0 0 auto;
+    width: 66.66666667%;
+  }
+}
