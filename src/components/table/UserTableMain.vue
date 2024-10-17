@@ -1,6 +1,6 @@
 <script setup>
 import SkeltonUserTableMain from "../skeltons/SkeltonUserTableMain.vue";
-import Modal from "../shared-components/Modal.vue";
+import Modal from "../sharedComponents/Modal.vue";
 
 import {computed, ref, watch} from "vue";
 import {useStore} from 'vuex';
