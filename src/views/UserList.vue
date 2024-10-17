@@ -2,14 +2,19 @@
 import UserTableTop from "../components/table/UserTableTop.vue";
 import UserTableMain from "../components/table/UserTableMain.vue";
 import UserTablePaginator from "../components/table/UserTablePaginator.vue";
-import {onMounted} from "vue";
+import {onBeforeUnmount, onMounted} from "vue";
 import {useStore} from "vuex";
+import {clearUserData} from "../utils/user";
 
 const store = useStore();
 
 onMounted(() => {
   store.dispatch('fetchUserList');
 });
+
+onBeforeUnmount(() => {
+  store.commit('setPageNumber', 1);
+})
 </script>
 
 <template>
